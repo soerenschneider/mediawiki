@@ -36,7 +36,6 @@ jobs:
         with:
           images: ${{ env.GH_REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=raw,value={{ branch}}-{{date 'YYYYMMDDHHmmss'}}
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
 
