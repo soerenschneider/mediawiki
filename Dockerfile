@@ -5,7 +5,7 @@ RUN mkdir /extensions
 RUN git -C /extensions clone https://gerrit.wikimedia.org/r/mediawiki/extensions/OpenIDConnect
 RUN git -C /extensions clone https://gerrit.wikimedia.org/r/mediawiki/extensions/PluggableAuth
 
-FROM composer:2.6.6 AS composer
+FROM composer:2.7.2 AS composer
 
 FROM mediawiki:1.41.0
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
